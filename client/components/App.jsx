@@ -5,7 +5,7 @@ import SessionControls from "./SessionControls";
 import ToolPanel from "./ToolPanel";
 import AvatarViewer from "./AvatarViewer";
 import ResumeSection from "./ResumeSection";
-import ConversationStarters from "./ConversationStarters";
+import ContactInfo from "./ContactInfo";
 
 export default function App() {
   const [isSessionActive, setIsSessionActive] = useState(false);
@@ -160,13 +160,13 @@ export default function App() {
           </div>
         </div>
 
-        {/* Right column - Resume and Conversation Starters */}
-        <div className="w-[400px] flex flex-col gap-4 overflow-y-auto">
-          <div className="flex-1">
+        {/* Right column - Resume and Contact Info */}
+        <div className="w-[500px] flex flex-col gap-4">
+          <div className="flex-1 min-h-[600px]">
             <ResumeSection />
           </div>
-          <div className="flex-1">
-            <ConversationStarters sendTextMessage={sendTextMessage} />
+          <div className="h-32">
+            <ContactInfo />
           </div>
         </div>
       </main>

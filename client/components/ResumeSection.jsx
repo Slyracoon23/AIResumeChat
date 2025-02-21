@@ -50,7 +50,7 @@ const ResumeSection = () => {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-lg p-6 h-full flex flex-col">
+    <div className="bg-white rounded-lg shadow-lg p-6 h-full">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-xl font-semibold">Resume</h2>
         {pdfFile && (
@@ -64,7 +64,7 @@ const ResumeSection = () => {
       </div>
 
       {!pdfFile ? (
-        <div className="flex-1 border-2 border-dashed rounded-lg flex items-center justify-center p-6">
+        <div className="h-[calc(100%-3rem)] border-2 border-dashed rounded-lg flex items-center justify-center p-6">
           <div className="text-center">
             <svg 
               className="mx-auto h-12 w-12 text-gray-400" 
@@ -99,13 +99,13 @@ const ResumeSection = () => {
           <Document
             file={pdfFile}
             onLoadSuccess={onDocumentLoadSuccess}
-            className="flex-1 overflow-y-auto"
+            className="flex-1"
             options={options}
           >
             <Page 
               pageNumber={pageNumber} 
               className="mx-auto"
-              width={350}
+              width={450}
             />
           </Document>
           {numPages > 1 && (

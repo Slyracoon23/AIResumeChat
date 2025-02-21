@@ -13,7 +13,7 @@ function SessionStopped({ startSession }) {
   }
 
   return (
-    <div className="flex items-center justify-center w-full h-full">
+    <div className="flex items-center justify-start w-full h-full pl-4">
       <Button
         onClick={handleStartSession}
         className={isActivating ? "bg-gray-600" : "bg-red-600"}
